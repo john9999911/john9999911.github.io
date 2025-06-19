@@ -3,7 +3,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <title>LoveStory GPT建站 | LJC&#39;s Blog</title>
+        <title>LoveStory-TODO-6-18 | LJC&#39;s Blog</title>
         <meta name="author" content="john9999911" />
         <meta name="description" content="" />
         <meta name="keywords" content="ljc, blog, hexo, github, pages" />
@@ -166,14 +166,14 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>LoveStory GPT建站</h1>
+        <h1>LoveStory-TODO-6-18</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2025/6/17
+            2025/6/19
         </span>
         
         <span class="category">
@@ -186,182 +186,54 @@
         </span>
         
         
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/html/" style="color: #ff7d73">html</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/nextjs/" style="color: #ff7d73">nextjs</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/cloudflare/" style="color: #00a596">cloudflare</a>
-            </span>
-            
-            <span class="tag">
-                
-                <a href="/tags/GPT/" style="color: #ffa2c4">GPT</a>
-            </span>
-            
-        </span>
-        
     </div>
     
     <div class="content" v-pre>
-        <h2 id="🧩-你的需求回顾一下："><a href="#🧩-你的需求回顾一下：" class="headerlink" title="🧩 你的需求回顾一下："></a>🧩 你的需求回顾一下：</h2><blockquote>
-<p>✅ 博客展示 + ✅ 管理员登录界面 + ✅ 简单增删改查<br>🚫 不想租服务器<br>✅ 想用 Cloudflare 完成全部部署</p>
-</blockquote>
-<hr>
-<h2 id="🧱-推荐技术栈总览（无服务器全家桶）："><a href="#🧱-推荐技术栈总览（无服务器全家桶）：" class="headerlink" title="🧱 推荐技术栈总览（无服务器全家桶）："></a>🧱 推荐技术栈总览（无服务器全家桶）：</h2><table>
-<thead>
-<tr>
-<th>功能</th>
-<th>技术方案</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>前端页面展示（博客）</td>
-<td><strong>Next.js</strong> 静态导出（或 Astro） + Cloudflare Pages</td>
-</tr>
-<tr>
-<td>管理员界面（增删改查）</td>
-<td>Next.js + Tailwind UI 或 React 后台组件</td>
-</tr>
-<tr>
-<td>后端接口（API）</td>
-<td><strong>Cloudflare Workers</strong></td>
-</tr>
-<tr>
-<td>数据存储</td>
-<td><strong>Cloudflare D1</strong>（SQLite）或 Durable Objects</td>
-</tr>
-<tr>
-<td>静态资源加速</td>
-<td>Cloudflare CDN（自动附带）</td>
-</tr>
-<tr>
-<td>用户认证</td>
-<td>简易账号密码登录 → 存 JWT 或 Session 在 Cookie</td>
-</tr>
-<tr>
-<td>自定义域名+SSL</td>
-<td>Cloudflare 免费支持</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🏗️-架构怎么搭？"><a href="#🏗️-架构怎么搭？" class="headerlink" title="🏗️ 架构怎么搭？"></a>🏗️ 架构怎么搭？</h2><pre><code class="text">[用户浏览器]
-      ↓         静态 HTML/CSS/JS
-[Cloudflare Pages (Next.js Build)]
-      ↓         请求 API（增删改查）
-[Cloudflare Worker → D1 数据库]
-</code></pre>
+        <h1 id="多语言“我爱你”项目开发进度-TODO-List"><a href="#多语言“我爱你”项目开发进度-TODO-List" class="headerlink" title="多语言“我爱你”项目开发进度 TODO List"></a>多语言“我爱你”项目开发进度 TODO List</h1><ol>
+<li><p>需求与方案设计</p>
 <ul>
-<li>所有网页部署在 Cloudflare Pages（免费）</li>
-<li>所有动态请求（如新增文章、验证登录）走 Worker</li>
-<li>Worker 访问 Cloudflare D1 数据库读写数据</li>
-<li>你自己做个管理页面，也静态部署在 Pages 上（登录后才能访问）</li>
+<li><input checked="" disabled="" type="checkbox"> 明确项目目标与功能需求</li>
+<li><input checked="" disabled="" type="checkbox"> 设计数据库表结构（languages 表）</li>
 </ul>
-<hr>
-<h2 id="🌟-为什么这套组合好？"><a href="#🌟-为什么这套组合好？" class="headerlink" title="🌟 为什么这套组合好？"></a>🌟 为什么这套组合好？</h2><table>
-<thead>
-<tr>
-<th>优点</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>💸 免费为主</td>
-<td>Pages、Worker、D1 的免费额度很大，小站够用</td>
-</tr>
-<tr>
-<td>🌍 全球分发</td>
-<td>你的博客在全球访问都超快，CDN 加持！</td>
-</tr>
-<tr>
-<td>🧳 无部署负担</td>
-<td>不需要维护服务器、数据库主机等</td>
-</tr>
-<tr>
-<td>🔐 自带安全</td>
-<td>Cloudflare 自带防火墙、SSL</td>
-</tr>
-<tr>
-<td>🚀 易于扩展</td>
-<td>以后加评论、标签、搜索都可以扩展</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🔧-技术实现关键点拆解："><a href="#🔧-技术实现关键点拆解：" class="headerlink" title="🔧 技术实现关键点拆解："></a>🔧 技术实现关键点拆解：</h2><h3 id="1️⃣-博客展示页面"><a href="#1️⃣-博客展示页面" class="headerlink" title="1️⃣ 博客展示页面"></a>1️⃣ 博客展示页面</h3><ul>
-<li>用 <strong>Next.js 的 <code>getStaticProps</code> + <code>next export</code></strong> 预渲染博客内容</li>
-<li>生成 HTML + JSON，部署到 Cloudflare Pages</li>
-<li>数据源可以是 D1，也可以一开始先用 Markdown 文件</li>
+</li>
+<li><p>Cloudflare 基础环境准备</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 注册 Cloudflare 账号</li>
+<li><input checked="" disabled="" type="checkbox"> 安装并登录 wrangler CLI</li>
 </ul>
-<h3 id="2️⃣-管理员后台"><a href="#2️⃣-管理员后台" class="headerlink" title="2️⃣ 管理员后台"></a>2️⃣ 管理员后台</h3><ul>
-<li>用 React + TailwindCSS 做简单的后台界面（比如：文章列表 + 编辑框）</li>
-<li>登录后保存 token 在 Cookie</li>
-<li>所有操作发 API 到 Worker：比如 <code>/api/createPost</code>、<code>/api/deletePost</code></li>
+</li>
+<li><p>Worker + D1 数据库初始化</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 创建 Worker 项目 (TypeScript 模板)</li>
+<li><input checked="" disabled="" type="checkbox"> 创建 D1 数据库 love_you</li>
+<li><input checked="" disabled="" type="checkbox"> 在 wrangler.jsonc 完成 D1 数据库绑定</li>
+<li><input checked="" disabled="" type="checkbox"> 建立 languages 数据表</li>
+<li><input checked="" disabled="" type="checkbox"> 命令行插入&#x2F;查询测试数据，验证数据库可用</li>
 </ul>
-<h3 id="3️⃣-后端接口（Cloudflare-Workers）"><a href="#3️⃣-后端接口（Cloudflare-Workers）" class="headerlink" title="3️⃣ 后端接口（Cloudflare Workers）"></a>3️⃣ 后端接口（Cloudflare Workers）</h3><ul>
-<li>写 JS&#x2F;TS 处理 API 请求，验证 token</li>
-<li>使用 <code>@cloudflare/kv-asset-handler</code> 或 <code>cloudflare/wrangler</code> 部署</li>
-<li>请求数据库：用 <code>D1</code> 的 <code>env.DB.prepare(&quot;SELECT * FROM posts&quot;)</code> 等操作</li>
+</li>
+<li><p>API Worker 编写与测试</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> 编写 TypeScript 版 CRUD API 代码</li>
+<li><input checked="" disabled="" type="checkbox"> 本地 wrangler dev 启动 Worker</li>
+<li><input checked="" disabled="" type="checkbox"> 使用 curl&#x2F;Postman&#x2F;浏览器等工具测试增删查改接口</li>
 </ul>
-<h3 id="4️⃣-数据库（D1）"><a href="#4️⃣-数据库（D1）" class="headerlink" title="4️⃣ 数据库（D1）"></a>4️⃣ 数据库（D1）</h3><ul>
-<li>一张表 <code>posts(id, title, content, created_at)</code></li>
-<li>一张表 <code>users(id, username, password_hash)</code></li>
-<li>你可以通过 Wrangler CLI 直接建表、迁移、初始化</li>
+</li>
+<li><p>前端与后续开发</p>
+<ul>
+<li><input disabled="" type="checkbox"> 设计并开发前端展示页面</li>
+<li><input disabled="" type="checkbox"> 管理后台页面开发（含增加&#x2F;修改&#x2F;删除）</li>
+<li><input disabled="" type="checkbox"> 前后端联调，完善交互与体验</li>
+<li><input disabled="" type="checkbox"> 上线部署到 Cloudflare Pages</li>
 </ul>
-<hr>
-<h2 id="✨-最小可用项目（MVP）划分"><a href="#✨-最小可用项目（MVP）划分" class="headerlink" title="✨ 最小可用项目（MVP）划分"></a>✨ 最小可用项目（MVP）划分</h2><table>
-<thead>
-<tr>
-<th>功能</th>
-<th>推荐技术</th>
-<th>是否必须</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>博客展示</td>
-<td>Next.js → Pages</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>管理页面</td>
-<td>Next.js + React UI</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>登录验证</td>
-<td>Worker + Cookie</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>数据增删改查</td>
-<td>Worker + D1</td>
-<td>✅</td>
-</tr>
-<tr>
-<td>评论系统</td>
-<td>可后加（或用别家）</td>
-<td>❌</td>
-</tr>
-<tr>
-<td>搜索功能</td>
-<td>先不加</td>
-<td>❌</td>
-</tr>
-</tbody></table>
-<hr>
-<h2 id="🐣-总结一句话："><a href="#🐣-总结一句话：" class="headerlink" title="🐣 总结一句话："></a>🐣 总结一句话：</h2><p>你完全可以<strong>不租服务器，100% 用 Cloudflare</strong> 搭建一个可登录、可增删改查的博客系统！而且现代、安全、全球可访问！🌍</p>
-<hr>
+</li>
+<li><p>其它优化与完善</p>
+<ul>
+<li><input disabled="" type="checkbox"> 样式美化与响应式布局</li>
+<li><input disabled="" type="checkbox"> 权限管理与错误处理</li>
+<li><input disabled="" type="checkbox"> 多语言内容补充和音频素材完善</li>
+</ul>
+</li>
+</ol>
 
     </div>
     

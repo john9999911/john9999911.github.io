@@ -3,7 +3,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <title>科研入门1 | LJC&#39;s Blog</title>
+        <title>LoveStory-DB-test | LJC&#39;s Blog</title>
         <meta name="author" content="john9999911" />
         <meta name="description" content="" />
         <meta name="keywords" content="ljc, blog, hexo, github, pages" />
@@ -166,22 +166,22 @@
                 <div id="main" v-show="!loading">
                     <div class="article">
     <div>
-        <h1>科研入门1</h1>
+        <h1>LoveStory-DB-test</h1>
     </div>
     <div class="info">
         <span class="date">
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/5/23
+            2025/6/19
         </span>
         
         <span class="category">
-            <a href="/categories/%E7%A7%91%E7%A0%94/">
+            <a href="/categories/%E6%8A%80%E6%9C%AF/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
-                科研
+                技术
             </a>
         </span>
         
@@ -193,12 +193,22 @@
             
             <span class="tag">
                 
-                <a href="/tags/Conda/" style="color: #ffa2c4">Conda</a>
+                <a href="/tags/html/" style="color: #03a9f4">html</a>
             </span>
             
             <span class="tag">
                 
-                <a href="/tags/TensorFlow/" style="color: #00a596">TensorFlow</a>
+                <a href="/tags/nextjs/" style="color: #00bcd4">nextjs</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/cloudflare/" style="color: #00bcd4">cloudflare</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/GPT/" style="color: #00bcd4">GPT</a>
             </span>
             
         </span>
@@ -206,36 +216,125 @@
     </div>
     
     <div class="content" v-pre>
-        <h2 id="在使用conda和TensorFlow时遇到的一些问题和解决方案"><a href="#在使用conda和TensorFlow时遇到的一些问题和解决方案" class="headerlink" title="在使用conda和TensorFlow时遇到的一些问题和解决方案"></a>在使用conda和TensorFlow时遇到的一些问题和解决方案</h2><h3 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h3><blockquote>
-<ol>
-<li>安装miniconda时遇到报错<br>解决方案：报错显示在condarc配置文件中发现了重复的键值，可以通过删除或修改重复的键值来解决该问题。</li>
-<li>pycharm使用终端时遇到报错<br>解决方案：报错显示无法加载文件profile.ps1，是因为系统禁止运行脚本。需要根据报错信息中提供的链接了解Execution Policies并进行相应的配置调整。</li>
-<li>在pycharm中添加conda解释器的可执行文件<br>解决方案：对于Windows系统，可以在Miniconda安装目录下的Scripts文件夹中找到conda.exe作为解释器的可执行文件。</li>
-<li>安装conda环境的依赖<br>解决方案：可以使用<code>conda install --file dependency.txt</code>命令安装dependency.txt文件中列出的依赖包。</li>
-<li>更改conda环境的Python版本<br>解决方案：可以使用<code>conda install python=&lt;version&gt;</code>命令来更改conda环境的Python版本。</li>
-<li>如何使用Conda安装依赖项？<br>解决方案：在终端中使用<code>conda install</code>命令，后跟依赖项的名称。例如，<code>conda install numpy</code>用于安装NumPy。</li>
-<li>如何使用Conda安装指定版本的软件包？<br>解决方案：在<code>conda install</code>命令后使用<code>package=version</code>的形式来指定要安装的软件包及其版本。例如，<code>conda install tensorflow-gpu=1.8.0</code>用于安装TensorFlow-GPU版本1.8.0。</li>
-<li>如何创建和激活Conda环境？<br>解决方案：使用<code>conda create</code>命令创建新的环境，例如<code>conda create -n myenv</code>。然后，使用<code>conda activate</code>命令激活环境，例如<code>conda activate myenv</code>。</li>
-<li>如何使用Conda安装依赖文件（dependency.txt）中的依赖项？<br>解决方案：可以使用<code>conda install --file dependency.txt</code>命令来安装依赖文件中列出的所有依赖项。</li>
-<li>如何更改Conda环境中的Python版本？<br>解决方案：使用<code>conda install python=3.6</code>命令来安装指定版本的Python。确保在激活的环境中运行此命令。</li>
-</ol>
-</blockquote>
-<h3 id="TensorFlow"><a href="#TensorFlow" class="headerlink" title="TensorFlow"></a>TensorFlow</h3><blockquote>
-<ol>
-<li>查看TensorFlow是否能够使用GPU<br>解决方案：可以通过导入TensorFlow并执行相应的代码来检查是否找到了GPU设备。使用<code>print(tf.config.list_physical_devices(&#39;GPU&#39;))</code>或<code>sess.list_devices()</code>可以列出可用的GPU设备。TensorFlow模块没有<code>config</code>属性<br>解决方案：根据你提供的信息，你所安装的TensorFlow版本为1.8.0，因此应使用<code>tf.Session</code>来创建会话，并通过<code>sess.list_devices()</code>来查看GPU设备。</li>
-<li>如何检查TensorFlow是否能够使用GPU？<br>解决方案：使用<code>import tensorflow as tf</code>导入TensorFlow库，然后使用<code>tf.config.list_physical_devices(&#39;GPU&#39;)</code>查看是否存在可用的GPU设备。</li>
-<li>为什么在运行TensorFlow代码时会出现内存不足的错误？<br>解决方案：出现内存不足的错误可能是因为模型或数据集太大而导致的。可以尝试减小批次大小、减小模型规模、优化内存使用或使用更小的数据集来减少内存占用。</li>
-<li>如何减小GPU内存占用？<br>解决方案：</li>
-</ol>
+        <p>非常好！下面是超详细<strong>TypeScript 版本 API Worker 文件的写法</strong>、<strong>本地测试方法</strong>和<strong>Postman&#x2F;curl 的具体使用教程</strong>，一步步带你入门。</p>
+<hr>
+<h2 id="1-编写-Worker-API-代码"><a href="#1-编写-Worker-API-代码" class="headerlink" title="1. 编写 Worker API 代码"></a>1. 编写 Worker API 代码</h2><p>请将如下 TypeScript 代码粘贴到你的 <code>src/index.ts</code> 文件：</p>
+<pre><code class="typescript">export default &#123;
+  async fetch(request: Request, env: any) &#123;
+    const url = new URL(request.url);
+    const &#123; pathname &#125; = url;
+
+    // 获取所有语言
+    if (pathname === &quot;/api/languages&quot; &amp;&amp; request.method === &quot;GET&quot;) &#123;
+      const &#123; results &#125; = await env.DB.prepare(&quot;SELECT * FROM languages&quot;).all();
+      return Response.json(results);
+    &#125;
+
+    // 新增语言
+    if (pathname === &quot;/api/languages&quot; &amp;&amp; request.method === &quot;POST&quot;) &#123;
+      const body = await request.json();
+      const &#123; country, flag_url, male_text, female_text, male_audio, female_audio &#125; = body;
+      if (!country || !male_text) &#123;
+        return Response.json(&#123; error: &quot;Missing required fields&quot; &#125;, &#123; status: 400 &#125;);
+      &#125;
+      await env.DB.prepare(
+        `INSERT INTO languages (country, flag_url, male_text, female_text, male_audio, female_audio)
+         VALUES (?, ?, ?, ?, ?, ?)`
+      ).bind(
+        country, flag_url || &quot;&quot;, male_text, female_text || &quot;&quot;, male_audio || &quot;&quot;, female_audio || &quot;&quot;
+      ).run();
+      return Response.json(&#123; success: true &#125;);
+    &#125;
+
+    // 匹配 /api/languages/:id
+    const languageIdMatch = pathname.match(/^\/api\/languages\/(\d+)$/);
+    const id = languageIdMatch ? languageIdMatch[1] : null;
+
+    // 获取单条
+    if (id &amp;&amp; request.method === &quot;GET&quot;) &#123;
+      const &#123; results &#125; = await env.DB.prepare(&quot;SELECT * FROM languages WHERE id = ?&quot;).bind(id).all();
+      if (!results.length) return Response.json(&#123; error: &quot;Not found&quot; &#125;, &#123; status: 404 &#125;);
+      return Response.json(results[0]);
+    &#125;
+
+    // 更新
+    if (id &amp;&amp; request.method === &quot;PUT&quot;) &#123;
+      const body = await request.json();
+      const &#123; country, flag_url, male_text, female_text, male_audio, female_audio &#125; = body;
+      await env.DB.prepare(
+        `UPDATE languages SET country=?, flag_url=?, male_text=?, female_text=?, male_audio=?, female_audio=? WHERE id=?`
+      ).bind(
+        country, flag_url, male_text, female_text, male_audio, female_audio, id
+      ).run();
+      return Response.json(&#123; success: true &#125;);
+    &#125;
+
+    // 删除
+    if (id &amp;&amp; request.method === &quot;DELETE&quot;) &#123;
+      await env.DB.prepare(&quot;DELETE FROM languages WHERE id=?&quot;).bind(id).run();
+      return Response.json(&#123; success: true &#125;);
+    &#125;
+
+    // 默认 404
+    return new Response(&quot;Not found&quot;, &#123; status: 404 &#125;);
+  &#125;
+&#125;;
+</code></pre>
+<hr>
+<h2 id="2-启动本地开发环境"><a href="#2-启动本地开发环境" class="headerlink" title="2. 启动本地开发环境"></a>2. 启动本地开发环境</h2><p>在你的项目根目录终端输入：</p>
+<pre><code class="bash">wrangler dev
+</code></pre>
+<p>默认会在 <a target="_blank" rel="noopener" href="http://localhost:8787/">http://localhost:8787</a> 启动本地服务。</p>
+<hr>
+<h2 id="3-用浏览器或-curl-测试-GET-请求"><a href="#3-用浏览器或-curl-测试-GET-请求" class="headerlink" title="3. 用浏览器或 curl 测试 GET 请求"></a>3. 用浏览器或 curl 测试 GET 请求</h2><h3 id="用浏览器"><a href="#用浏览器" class="headerlink" title="用浏览器"></a>用浏览器</h3><p>直接访问：</p>
 <ul>
-<li>减小批次大小：通过减小训练时的批次大小来降低GPU内存使用量。</li>
-<li>减小模型规模：减小模型的隐藏层维度、LSTM维度或嵌入维度等参数，以减少内存使用。</li>
-<li>优化内存使用：及时释放不再需要的中间变量和张量，使用<code>tf.keras.backend.clear_session()</code>清理会话并释放内存。</li>
-<li>使用更小的数据集：使用较小的训练数据集进行训练，以减少内存需求。</li>
-<li>降低模型复杂性：使用更简单的模型架构或减少输入序列的长度，以降低内存需求。</li>
+<li><a target="_blank" rel="noopener" href="http://localhost:8787/api/languages">http://localhost:8787/api/languages</a><br>（看到空数组 <code>[]</code> 或数据，说明正常）</li>
 </ul>
-<p>注意：在减小内存占用时，需要权衡内存和性能之间</p>
-</blockquote>
+<h3 id="用-curl"><a href="#用-curl" class="headerlink" title="用 curl"></a>用 curl</h3><pre><code class="bash">curl http://localhost:8787/api/languages
+</code></pre>
+<hr>
+<h2 id="4-用-Postman-或-curl-测试-POST（新增）"><a href="#4-用-Postman-或-curl-测试-POST（新增）" class="headerlink" title="4. 用 Postman 或 curl 测试 POST（新增）"></a>4. 用 Postman 或 curl 测试 POST（新增）</h2><h3 id="用-Postman"><a href="#用-Postman" class="headerlink" title="用 Postman"></a>用 Postman</h3><ol>
+<li>新建 Request，选择 <code>POST</code> 方法，URL 填写<br><code>http://localhost:8787/api/languages</code></li>
+<li>切换到 <strong>Body</strong>，选 <strong>raw</strong>，类型选 <strong>JSON</strong>。</li>
+<li>粘贴如下示例：<pre><code class="json">&#123;
+  &quot;country&quot;: &quot;Japan&quot;,
+  &quot;flag_url&quot;: &quot;🇯🇵&quot;,
+  &quot;male_text&quot;: &quot;愛してる&quot;,
+  &quot;female_text&quot;: &quot;愛してる&quot;,
+  &quot;male_audio&quot;: &quot;&quot;,
+  &quot;female_audio&quot;: &quot;&quot;
+&#125;
+</code></pre>
+</li>
+<li>点击 <strong>Send</strong>，看到 <code>&#123; &quot;success&quot;: true &#125;</code> 就成功了。</li>
+</ol>
+<h3 id="用-curl-1"><a href="#用-curl-1" class="headerlink" title="用 curl"></a>用 curl</h3><pre><code class="bash">curl -X POST http://localhost:8787/api/languages \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;&#123;&quot;country&quot;:&quot;Japan&quot;,&quot;flag_url&quot;:&quot;🇯🇵&quot;,&quot;male_text&quot;:&quot;愛してる&quot;,&quot;female_text&quot;:&quot;愛してる&quot;,&quot;male_audio&quot;:&quot;&quot;,&quot;female_audio&quot;:&quot;&quot;&#125;&#39;
+</code></pre>
+<hr>
+<h2 id="5-用浏览器-curl-Postman-测试-“获取单条-更新-删除”"><a href="#5-用浏览器-curl-Postman-测试-“获取单条-更新-删除”" class="headerlink" title="5. 用浏览器&#x2F;curl&#x2F;Postman 测试 “获取单条&#x2F;更新&#x2F;删除”"></a>5. 用浏览器&#x2F;curl&#x2F;Postman 测试 “获取单条&#x2F;更新&#x2F;删除”</h2><h3 id="获取单条"><a href="#获取单条" class="headerlink" title="获取单条"></a>获取单条</h3><p>浏览器访问<br><code>http://localhost:8787/api/languages/1</code></p>
+<h3 id="更新（PUT）"><a href="#更新（PUT）" class="headerlink" title="更新（PUT）"></a>更新（PUT）</h3><p><strong>curl 示例：</strong></p>
+<pre><code class="bash">curl -X PUT http://localhost:8787/api/languages/1 \
+  -H &quot;Content-Type: application/json&quot; \
+  -d &#39;&#123;&quot;country&quot;:&quot;Japan&quot;,&quot;flag_url&quot;:&quot;🇯🇵&quot;,&quot;male_text&quot;:&quot;大好き&quot;,&quot;female_text&quot;:&quot;大好き&quot;,&quot;male_audio&quot;:&quot;&quot;,&quot;female_audio&quot;:&quot;&quot;&#125;&#39;
+</code></pre>
+<h3 id="删除（DELETE）"><a href="#删除（DELETE）" class="headerlink" title="删除（DELETE）"></a>删除（DELETE）</h3><p><strong>curl 示例：</strong></p>
+<pre><code class="bash">curl -X DELETE http://localhost:8787/api/languages/1
+</code></pre>
+<hr>
+<h2 id="6-检查结果"><a href="#6-检查结果" class="headerlink" title="6. 检查结果"></a>6. 检查结果</h2><ul>
+<li>每次增删改后，用 GET 刷新查看数据变化。</li>
+<li>如有报错，终端会有详细输出，直接发出来我帮你看。</li>
+</ul>
+<hr>
+<h2 id="总结流程"><a href="#总结流程" class="headerlink" title="总结流程"></a>总结流程</h2><ol>
+<li>粘贴 TypeScript 代码到 <code>src/index.ts</code></li>
+<li><code>wrangler dev</code> 启动服务</li>
+<li>用 Postman&#x2F;curl&#x2F;浏览器按上面方法测试每个接口</li>
+<li>一切 OK 后就可以开发前端啦！</li>
+</ol>
+<hr>
 
     </div>
     

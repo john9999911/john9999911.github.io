@@ -3,7 +3,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8" />
-        <title>Categories: 媒体 | LJC&#39;s Blog</title>
+        <title>LoveStory-DB | LJC&#39;s Blog</title>
         <meta name="author" content="john9999911" />
         <meta name="description" content="" />
         <meta name="keywords" content="ljc, blog, hexo, github, pages" />
@@ -32,6 +32,10 @@
 
 
 <script src="/js/lib/preview.js"></script>
+
+
+
+
 
 
 
@@ -160,138 +164,208 @@
 
             <transition name="into">
                 <div id="main" v-show="!loading">
-                    <div id="archives">
-    
-    <div class="categories-tags">
-        
-            
-            <span>
-            <a href="/categories/%E6%97%A5%E5%B8%B8/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                日常
-            </a>
+                    <div class="article">
+    <div>
+        <h1>LoveStory-DB</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2025/6/19
         </span>
-            
         
-            
-            <span>
-            <a href="/categories/%E7%A7%91%E7%A0%94/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                科研
-            </a>
-        </span>
-            
-        
-            
-            <span>
-            <a href="/categories/%E6%8A%80%E6%9C%AF/" style="background: #00bcd4">
+        <span class="category">
+            <a href="/categories/%E6%8A%80%E6%9C%AF/">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
                 技术
             </a>
         </span>
-            
         
-            
-            <span>
-            <a href="/categories/%E6%8A%80%E6%9C%AF/Hexo/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                Hexo
-            </a>
-        </span>
-            
         
+        <span class="tags">
+            <span class="icon">
+                <i class="fa-solid fa-tags fa-fw"></i>
+            </span>
             
-            <span>
-            <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99/" style="background: #ffa2c4">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                建站
-            </a>
-        </span>
-            
-        
-            
-            <span>
-            <a href="/categories/%E5%AE%9E%E8%B7%B5/" style="background: #00a596">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                实践
-            </a>
-        </span>
-            
-        
-            
-            <span>
-            <a href="/categories/%E5%AA%92%E4%BD%93/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                媒体
-            </a>
-        </span>
-            
+            <span class="tag">
                 
+                <a href="/tags/html/" style="color: #00bcd4">html</a>
+            </span>
             
-        
+            <span class="tag">
+                
+                <a href="/tags/nextjs/" style="color: #00bcd4">nextjs</a>
+            </span>
             
-            <span>
-            <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%BB%BA%E7%AB%99/TODO/" style="background: #ff7d73">
-                <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
-                </span>
-                TODO
-            </a>
+            <span class="tag">
+                
+                <a href="/tags/cloudflare/" style="color: #00a596">cloudflare</a>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/GPT/" style="color: #00bcd4">GPT</a>
+            </span>
+            
         </span>
-            
         
     </div>
     
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2023/5/13</div>
-                <a href="/%E5%AA%92%E4%BD%93/2023/05/my-gallery/">
-                    <h3>My Gallery</h3>
-                </a>
-                <div class="info">
-                    
-                        <span class="category">
-                    <a href="/categories/%E5%AA%92%E4%BD%93/">
-                        <span class="icon">
-                            <i class="fa-solid fa-bookmark fa-fw"></i>
-                        </span>
-                        媒体
-                    </a>
-                </span>
-                    
-                    
-                        <span class="tags">
-                    <span class="icon">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </span>
-                            
-                                <span class="tag">
-                                    
-                                    <a href="/tags/Picture/" style="color: #00a596">Picture</a>
-                    </span>
-                            
-                        </span>
-                    
-                </div>
-            </div>
-        </div>
+    <div class="content" v-pre>
+        <p>好的！我们一步一步来，假设你完全没有配置过 Cloudflare Worker 和 D1 数据库。这里是<strong>超详细入门流程</strong>，你只需按步骤操作即可。</p>
+<hr>
+<h2 id="1-注册-Cloudflare-账号"><a href="#1-注册-Cloudflare-账号" class="headerlink" title="1. 注册 Cloudflare 账号"></a>1. 注册 Cloudflare 账号</h2><ul>
+<li>如果还没注册，访问 <a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">Cloudflare 官网</a> 免费注册。</li>
+</ul>
+<hr>
+<h2 id="2-安装-Wrangler-CLI"><a href="#2-安装-Wrangler-CLI" class="headerlink" title="2. 安装 Wrangler CLI"></a>2. 安装 Wrangler CLI</h2><p>Wrangler 是 Cloudflare 官方命令行工具，用于开发和部署 Worker、管理 D1 数据库等。</p>
+<pre><code class="bash">npm install -g wrangler
+</code></pre>
+<blockquote>
+<p>需要 Node.js 环境，没装可以先去 <a target="_blank" rel="noopener" href="https://nodejs.org/">nodejs.org</a> 下一个。</p>
+</blockquote>
+<hr>
+<h2 id="3-登录-Cloudflare"><a href="#3-登录-Cloudflare" class="headerlink" title="3. 登录 Cloudflare"></a>3. 登录 Cloudflare</h2><pre><code class="bash">wrangler login
+</code></pre>
+<p>会弹出网页让你授权。</p>
+<hr>
+<h2 id="4-创建-Worker-项目"><a href="#4-创建-Worker-项目" class="headerlink" title="4. 创建 Worker 项目"></a>4. 创建 Worker 项目</h2><pre><code class="bash">wrangler init love-you-api
+cd love-you-api
+</code></pre>
+<ul>
+<li>选择 <code>Hello World</code> 模板即可，语言选 JavaScript 或 TypeScript，都可以。</li>
+<li>目录结构类似：<pre><code>love-you-api/
+  ├── src/
+  │   └── index.js
+  ├── wrangler.jsonc
+  └── package.json
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="5-创建-D1-数据库"><a href="#5-创建-D1-数据库" class="headerlink" title="5. 创建 D1 数据库"></a>5. 创建 D1 数据库</h2><pre><code class="bash">wrangler d1 create love_you
+</code></pre>
+<ul>
+<li>“love_you” 是数据库名字，可以自定义。</li>
+</ul>
+<hr>
+<h2 id="6-绑定-D1-数据库到-Worker"><a href="#6-绑定-D1-数据库到-Worker" class="headerlink" title="6. 绑定 D1 数据库到 Worker"></a>6. 绑定 D1 数据库到 Worker</h2><p>编辑 <code>wrangler.jsonc</code>，加入：</p>
+<pre><code class="jsonc">&#123;
+  &quot;$schema&quot;: &quot;node_modules/wrangler/config-schema.json&quot;,
+  &quot;name&quot;: &quot;love-you-api&quot;,
+  &quot;main&quot;: &quot;src/index.ts&quot;,
+  &quot;compatibility_date&quot;: &quot;2025-06-18&quot;,
+  &quot;observability&quot;: &#123;
+    &quot;enabled&quot;: true
+  &#125;,
+  &quot;d1_databases&quot;: [
+    &#123;
+      &quot;binding&quot;: &quot;DB&quot;,
+      &quot;database_name&quot;: &quot;love_you&quot;,
+      &quot;database_id&quot;: &quot;xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;
+    &#125;
+  ]
+&#125;
+</code></pre>
+<hr>
+<h2 id="7-初始化数据库表结构"><a href="#7-初始化数据库表结构" class="headerlink" title="7. 初始化数据库表结构"></a>7. 初始化数据库表结构</h2><p>创建建表 SQL 文件（如 <code>init.sql</code>），内容如下：</p>
+<pre><code class="sql">CREATE TABLE languages (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  country TEXT NOT NULL,
+  flag_url TEXT,
+  male_text TEXT NOT NULL,
+  female_text TEXT,
+  male_audio TEXT,
+  female_audio TEXT
+);
+</code></pre>
+<p>执行：</p>
+<pre><code class="bash">wrangler d1 execute love_you --file=init.sql
+</code></pre>
+<p>（love_you 为你的 D1 数据库名）</p>
+<hr>
+<h2 id="8-本地开发-Worker"><a href="#8-本地开发-Worker" class="headerlink" title="8. 本地开发 Worker"></a>8. 本地开发 Worker</h2><p>启动本地开发环境：</p>
+<pre><code class="bash">wrangler dev
+</code></pre>
+<ul>
+<li>默认监听 <a target="_blank" rel="noopener" href="http://localhost:8787/">http://localhost:8787</a></li>
+<li>你可以用 Postman、curl 或浏览器访问测试。<pre><code>wrangler d1 execute love_you --command &quot;INSERT INTO languages (country, flag_url, male_text, female_text, male_audio, female_audio) VALUES (&#39;China&#39;, &#39;🇨🇳&#39;, &#39;我爱你&#39;, &#39;我爱你&#39;, &#39;&#39;, &#39;&#39;);&quot;
+wrangler d1 execute love_you --command &quot;SELECT * FROM languages;&quot;
+</code></pre>
+</li>
+</ul>
+<hr>
+<h2 id="9-部署到-Cloudflare"><a href="#9-部署到-Cloudflare" class="headerlink" title="9. 部署到 Cloudflare"></a>9. 部署到 Cloudflare</h2><p>测试无误后，部署：</p>
+<pre><code class="bash">wrangler deploy
+</code></pre>
+<hr>
+<h2 id="总结表格"><a href="#总结表格" class="headerlink" title="总结表格"></a>总结表格</h2><table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>命令或操作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>注册账号</td>
+<td>Cloudflare 官网注册</td>
+</tr>
+<tr>
+<td>安装 wrangler</td>
+<td>npm install -g wrangler</td>
+</tr>
+<tr>
+<td>登录</td>
+<td>wrangler login</td>
+</tr>
+<tr>
+<td>创建 Worker 项目</td>
+<td>wrangler init love-you-api</td>
+</tr>
+<tr>
+<td>创建 D1 数据库</td>
+<td>wrangler d1 create love_you</td>
+</tr>
+<tr>
+<td>绑定数据库</td>
+<td>编辑 wrangler.jsonc，添加 d1_databases 部分</td>
+</tr>
+<tr>
+<td>建表</td>
+<td>wrangler d1 execute love_you –file&#x3D;init.sql</td>
+</tr>
+<tr>
+<td>本地开发</td>
+<td>wrangler dev</td>
+</tr>
+<tr>
+<td>部署</td>
+<td>wrangler deploy</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="你只需按顺序操作"><a href="#你只需按顺序操作" class="headerlink" title="你只需按顺序操作"></a>你只需按顺序操作</h2><p>做到第8步，本地 Worker 就能连上 D1 数据库，CRUD 接口开发准备完毕！<br>接下来即可编写和测试 API 代码。</p>
+<hr>
+<p><strong>如果哪一步卡住了，直接把报错发给我即可，我帮你解决。</strong><br>完成到 “本地开发 Worker” 这一步后，我再教你如何写 API 代码。</p>
+
+    </div>
+    
+    
+    
+    
+    <div id="comment">
+        <div id="giscus-container" class="giscus"></div>
+    </div>
+    
+    
+    
     
 </div>
+
                     <footer id="footer">
     <div id="footer-wrap">
         <div>
@@ -321,6 +395,29 @@
             
         </div>
         <script src="/js/main.js"></script>
+        
+        
+<script
+    src="https://giscus.app/client.js"
+    data-repo="john9999911/john9999911.github.io"
+    data-repo-id="R_kgDOIzcI4A"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOIzcI4M4CTrko"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    crossorigin
+    async
+></script>
+
+
+
+
+
         
         <canvas
                 id="fireworks"
